@@ -21,7 +21,7 @@ tf4 = Compose([
 # 5. Crop + 强烈色彩抖动
 tf5 = Compose([
     RandomCrop((80, 80)),
-    ColorJitter(brightness=.3, contrast=.3, saturation=.2)
+    ColorJitter(brightness=.5, contrast=.5, saturation=.3)
 ])
 tf_list = [tf1, tf2, tf3, tf4, tf5]
 methods = [cv2.TM_CCORR_NORMED, cv2.TM_CCOEFF_NORMED, cv2.TM_CCOEFF, cv2.TM_CCORR]
